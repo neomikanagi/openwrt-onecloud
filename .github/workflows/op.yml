@@ -122,9 +122,9 @@ jobs:
         CONFIG_TARGET_ROOTFS_PARTSIZE=${{ github.event.inputs.OP_rootfs }}
         CONFIG_KERNEL_EXT4_FS_SECURITY=y
         # CONFIG_TARGET_ROOTFS_SQUASHFS is not set
-        # CONFIG_PACKAGE_dnsmasq is not set
+        CONFIG_PACKAGE_dnsmasq=y
         
-        CONFIG_PACKAGE_dnsmasq-full=y
+        # CONFIG_PACKAGE_dnsmasq-full is not set
         CONFIG_PACKAGE_luci-app-firewall=y
         CONFIG_PACKAGE_bash=y
         # CONFIG_PACKAGE_kmod-nft-socket is not set  # 移除 nftables 相关模块
