@@ -139,6 +139,11 @@ jobs:
         CONFIG_PACKAGE_kmod-tun=y
         CONFIG_PACKAGE_zram-swap=y
         CONFIG_PACKAGE_my-default-settings=y
+        CONFIG_PACKAGE_kmod-usb-net=y
+        CONFIG_PACKAGE_kmod-usb-net-rndis=y
+        CONFIG_PACKAGE_kmod-usb-net-cdc-ether=y
+        CONFIG_PACKAGE_usb-modeswitch=y
+        CONFIG_PACKAGE_openssh-sftp-server=y
         EOF
         
         
