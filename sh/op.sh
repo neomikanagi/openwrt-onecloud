@@ -19,7 +19,7 @@ git_sparse_clone $REPO_BRANCH https://github.com/immortalwrt/luci modules/luci-b
 git_sparse_clone $REPO_BRANCH https://github.com/immortalwrt/luci modules/luci-mod-status
 git_sparse_clone $REPO_BRANCH https://github.com/immortalwrt/packages net/chinadns-ng
 git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
-
+git_sparse_clone dev https://github.com/douglarek/luci-app-homeproxy luci-app-homeproxy
 
 git clone -b master --depth 1 --single-branch https://github.com/jerrykuku/luci-theme-argon package/xd/luci-theme-argon
 git clone -b master --depth 1 --single-branch https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
@@ -38,6 +38,7 @@ cp -rf luci-app-openclash package
 cp -rf emortal package
 cp -rf luci-base feeds/luci/modules
 cp -rf luci-mod-status feeds/luci/modules/
+cp -rf luci-app-homeproxy package
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
