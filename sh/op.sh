@@ -24,6 +24,7 @@ git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclas
 git clone -b master --depth 1 --single-branch https://github.com/jerrykuku/luci-theme-argon package/xd/luci-theme-argon
 git clone -b master --depth 1 --single-branch https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 git clone -b v5-lua --depth 1 --single-branch https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
+git clone -b master --depth 1 --single-branch https://github.com/immortalwrt/homeproxy package/homeproxy
 
 curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh --no-sfe
 ./scripts/feeds update -a
@@ -38,6 +39,7 @@ cp -rf luci-app-openclash package
 cp -rf emortal package
 cp -rf luci-base feeds/luci/modules
 cp -rf luci-mod-status feeds/luci/modules/
+cp -rf homeproxy package
 sed -i 's/+luci-light //g' feeds/luci/collections/luci/Makefile
 
 ./scripts/feeds update -a
